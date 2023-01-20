@@ -55,12 +55,34 @@ function jogo () {
   positionX += velX;
   positionY += velY;
 
+  // Espelhamento
+  //   Horizontal
+  if(positionX < 0) {
+    positionX = grid;
+  }
+  if(positionX > 20) {
+    positionX = 0;
+  }
+    //Vertical
+  if(positionY < 0) {
+    positionY = grid;
+  }
+
+  if (positionY > grid) {
+    positionY = 0;
+  }
+  
   // Posicionando a cobra
   snake.push({x: positionX, y: positionY});
-
+  
   // Configuração da cobra
   ctx.fillStyle = '#00f102';
   for (let index=0; index < snake.length; index +=1) {
     ctx.fillRect(snake[index].x*grid, snake[index].y*grid, grid-1, grid-1);
+  }
+
+  // Apagando posição antiga da cobra/sensação de movimento
+  while(snake.length > tam) {
+    snake.shift();
   }
 }
