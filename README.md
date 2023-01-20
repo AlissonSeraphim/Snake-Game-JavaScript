@@ -12,7 +12,7 @@ Para a criação desse jogo foram utilizados somente:
 
 - HTML;
 - JavaScript;
-- Canvas.
+- CSS.
 
 ## Como jogar ?
 
