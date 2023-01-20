@@ -58,23 +58,26 @@ function jogo () {
   // Espelhamento
   //   Horizontal
   if(positionX < 0) {
-    positionX = grid;
+    positionX = grid-1;
   }
-  if(positionX > 20) {
+  if(positionX >= 20) {
     positionX = 0;
   }
     //Vertical
   if(positionY < 0) {
-    positionY = grid;
+    positionY = grid-1;
   }
 
-  if (positionY > grid) {
+  if (positionY >= grid) {
     positionY = 0;
   }
+  
+  //Console para arrumar bug da posição 20
+    //console.log(positionX, positionY);
 
   // Configuração da cobra
   ctx.fillStyle = '#00f102';
-  for (let index=0; index < snake.length; index +=1) {
+  for (let index=0; index < snake.length; index ++) {
     ctx.fillRect(snake[index].x*grid, snake[index].y*grid, grid-1, grid-1);
     //colisão da cobra com si mesma
     if (snake[index].x == positionX && snake[index].y == positionY) {
