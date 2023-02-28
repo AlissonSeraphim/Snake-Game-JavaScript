@@ -16,11 +16,7 @@ Para a criação desse jogo foram utilizados somente:
 
 ## Como jogar ?
 
-Para jogar efetue:
-
-1. git clone na sua pasta de escolha;
-2. Execute o arquivo index.html;
-3. Se divirta !!
+Para jogar acesse: https://alissonseraphim.github.io/Snake-Game-JavaScript/
 
 ## Instruções 
 
